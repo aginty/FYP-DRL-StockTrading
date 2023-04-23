@@ -12,7 +12,9 @@ parser.add_argument("-train_file", "--train_file", help="location of training da
 parser.add_argument("-model_loc", "--model_loc", help="location to save trained model")
 parser.add_argument("-lr", "--lr", type=float, help="learning rate for training")
 parser.add_argument("-epochs", "--epochs", type=int, help="number of epochs for training")
+parser.add_argument("-layers", "--layers", type=int, help="number of hidden layers")
 parser.add_argument("-hidden", "--hidden", type=int, help="number of nodes in hidden layers")
+parser.add_argument("-bs", "--bs", type=int, help="batch size")
 parser.add_argument("-save_loc", "--save_loc", help="location to save results")
 args = parser.parse_args()
 
@@ -29,12 +31,12 @@ data = scaler.fit_transform(data['close'].values.reshape(-1,1))
 
 # define constants
 input_size = 1
-hidden_size = args.hidden
-num_layers = 2
+hidden_size = args.hidden #32
+num_layers = args.layers #2
 sequence_length = 10
 output_size = 5
-batch_size = 64
-num_epochs = args.epochs
+batch_size = args.bs #64
+num_epochs = args.epochs #5000
 
 # split data into training and testing sets
 train_size = len(data) #int(len(data) * 0.8)
