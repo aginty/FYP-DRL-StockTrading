@@ -52,7 +52,8 @@ modifications were made are detailed in the file structure below)
 Training a DRL agent:
 
 ```
-./DRL/train.py -ticker="IBM" -train_file="Datasets/IBM_train.csv" -trade_file="Datasets/IBM_trade.csv" -model_version="v1" -lr=0.001 -timesteps=500000 -ts=1 -scale=1 -ts_fe=0
+./DRL/train.py -ticker="IBM" -train_file="Datasets/IBM_train.csv" -trade_file="Datasets/IBM_trade.csv" 
+-model_version="v1" -lr=0.001 -timesteps=500000 -ts=1 -scale=1 -ts_fe=0
 ```
 
 The above code will train an agent on the IBM stock data. The parameters ts, scale, ts_fe are boolean values which can be set to 0 (False) or 1 (True).
