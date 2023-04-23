@@ -39,13 +39,14 @@ modifications were made are detailed in the file structure below)
 * All models for which results are presented in the report are saved in `DRL/models` and `Forecast-Decision-Rule/models` respectively
 * Results for all models are available as .csv files in `Results`
   There are 4 csv results files for each model
-        1. performance: details portfolio evalutaion metrics
 
-        2. account_balance: details changes in account balance during the testing period
+	*  performance: details portfolio evalutaion metrics
 
-        3. raw_actions: the actions requested by the agent
+	*  account_balance: details changes in account balance during the testing period
 
-        4. df_actions: the actions executed in the environment 
+	*  raw_actions: the actions requested by the agent
+
+	*  df_actions: the actions executed in the environment 
 
 
 
