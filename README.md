@@ -49,6 +49,21 @@ modifications were made are detailed in the file structure below)
 	*  df_actions: the actions executed in the environment 
 
 
+Training a DRL agent:
+
+```
+./DRL/train.py -ticker="IBM" -train_file="Datasets/IBM_train.csv" -trade_file="Datasets/IBM_trade.csv" -model_version="v1" -lr=0.001 -timesteps=500000 -ts=1 -scale=1 -ts_fe=0
+```
+
+The above code will train an agent on the IBM stock data. The parameters ts, scale, ts_fe are boolean values which can be set to 0 (False) or 1 (True).
+
+* ts: represent the state of the environment as a univariate time series (True/False)
+* scale: scale the features that represent the environment (True/False)
+* ts_fe: use a time series feature extractor in the policy and value function approximators (True/False)
+
+Note: All models included in this repository were trained using a learning rate of 0.001 and 500000 timesteps.
+
+
 
 
         
